@@ -9,10 +9,12 @@ let package = Package(
     products: [
         .library(
             name: "MintSDK",
+            type: .dynamic,
             targets: ["MintFrameworksWrapper"]
         ),
         .library(
             name: "MintFrameworks",
+            type: .dynamic,
             targets: ["MintFrameworksWrapper"]
         )
     ],
