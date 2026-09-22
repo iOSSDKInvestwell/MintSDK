@@ -29,14 +29,14 @@ let package = Package(
     ],
     targets: [
         .binaryTarget(
-            name: "MintFrameworksBinary",
-            url: "https://github.com/investwell-tools/mint-ios-sdk/releases/download/1.0.0/MintFrameworks.xcframework.zip",
-            checksum: "20070efd50271760dac26e2985c0e0a61cdc0c18ae62b7d869786a2e7ac2eb85"
+                      name: "MintFrameworksBinary",
+            url: "https://github.com/iOSSDKInvestwell/MintSDK/releases/download/1.0.4/MintFrameworks.xcframework.zip",
+            checksum: "49dbea1193059bfec984eca9d63b966d90c971d9abc27d120ca423385dff80c3"
         ),
         .binaryTarget(
-            name: "VoltFrameworkBinary",
-            url: "https://github.com/investwell-tools/mint-ios-sdk/releases/download/1.0.0/VoltFramework.xcframework.zip",
-            checksum: "4651a3eaf3844d74818385900ea72d07ffdbb6c1a827aa182b26575d8d91c02e"
+                     name: "VoltFrameworkBinary",
+            url: "https://github.com/iOSSDKInvestwell/MintSDK/releases/download/1.0.4/VoltFramework.xcframework.zip",
+            checksum: "cdc1e94186d00668566574cbc4e12c8519eadd13dfd756d3c117999e644d9fdc"
         ),
         .target(
             name: "MintFrameworksWrapper",
