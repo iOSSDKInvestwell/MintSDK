@@ -9,52 +9,23 @@ let package = Package(
     products: [
         .library(
             name: "MintSDK",
-            targets: ["MintFrameworksWrapper"]
+            targets: ["MintFrameworks", "VoltFramework"]
         ),
         .library(
             name: "MintFrameworks",
-            targets: ["MintFrameworksWrapper"]
+            targets: ["MintFrameworks"]
         )
-    ],
-    dependencies: [
-        .package(name: "DGCharts", url: "https://github.com/danielgindi/Charts.git", from: "5.1.0"),
-        .package(url: "https://github.com/hackiftekhar/IQKeyboardManager.git", from: "8.0.3"),
-        .package(url: "https://github.com/airbnb/lottie-ios.git", from: "4.6.1"),
-        .package(url: "https://github.com/SDWebImage/SDWebImage.git", from: "5.21.7"),
-        .package(url: "https://github.com/jonkykong/SideMenu.git", from: "6.5.0"),
-        .package(url: "https://github.com/SwiftyJSON/SwiftyJSON.git", from: "5.0.2"),
-        .package(url: "https://github.com/TimOliver/TOCropViewController.git", from: "3.2.0"),
-        .package(url: "https://github.com/Yummypets/YPImagePicker.git", from: "5.4.0"),
-        .package(url: "https://github.com/ninjaprox/NVActivityIndicatorView.git", from: "5.0.0")
     ],
     targets: [
         .binaryTarget(
-            name: "MintFrameworksBinary",
-            url: "https://github.com/iOSSDKInvestwell/MintSDK/releases/download/4.0.3/MintFrameworks.xcframework.zip",
-            checksum: "2dbf3cdc9c9e4b6c461c84c90be1e70ce5e04df5f4e4aa54d13a943baa577fa7"
+            name: "MintFrameworks",
+            url: "https://github.com/iOSSDKInvestwell/MintSDK/releases/download/4.0.4/MintFrameworks.xcframework.zip",
+            checksum: "d4b01a3164c679828efe805711b444dc06ed2209e1174f82c1806d3c81588408"
         ),
         .binaryTarget(
-            name: "VoltFrameworkBinary",
-            url: "https://github.com/iOSSDKInvestwell/MintSDK/releases/download/4.0.3/VoltFramework.xcframework.zip",
-            checksum: "a015439aedcfb2d5b2e76ea5c2f539d410edffba8a48592b6ae9aedb472ed436"
-        ),
-        .target(
-            name: "MintFrameworksWrapper",
-            dependencies: [
-                .target(name: "MintFrameworksBinary"),
-                .target(name: "VoltFrameworkBinary"),
-                .product(name: "DGCharts", package: "DGCharts"),
-                .product(name: "IQKeyboardManagerSwift", package: "IQKeyboardManager"),
-                .product(name: "Lottie", package: "lottie-ios"),
-                .product(name: "SDWebImage", package: "SDWebImage"),
-                .product(name: "SideMenu", package: "SideMenu"),
-                .product(name: "SwiftyJSON", package: "SwiftyJSON"),
-                .product(name: "TOCropViewController", package: "TOCropViewController"),
-                .product(name: "CropViewController", package: "TOCropViewController"),
-                .product(name: "YPImagePicker", package: "YPImagePicker"),
-                .product(name: "NVActivityIndicatorView", package: "NVActivityIndicatorView")
-            ],
-            path: "Sources/MintFrameworksWrapper"
+            name: "VoltFramework",
+            url: "https://github.com/iOSSDKInvestwell/MintSDK/releases/download/4.0.4/VoltFramework.xcframework.zip",
+            checksum: "55ce3d61f729ce0bcdcc493fd2e0addca83575ad7d5b88f76847326262c05885"
         )
     ]
 )
