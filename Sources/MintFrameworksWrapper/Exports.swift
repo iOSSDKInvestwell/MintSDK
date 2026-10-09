@@ -13,13 +13,13 @@
 @_exported import NVActivityIndicatorView
 
 public func _mintForceLinkDependencies() {
-    _ = SwiftyJSON.JSON.self
-    _ = Lottie.LottieAnimationView.self
-    _ = DGCharts.ChartViewBase.self
-    _ = CropViewController.CropViewController.self
-    _ = SideMenu.SideMenuNavigationController.self
-    _ = SDWebImage.SDWebImageManager.self
-    _ = IQKeyboardManagerSwift.IQKeyboardManager.self
-    _ = YPImagePicker.YPImagePicker.self
-    _ = NVActivityIndicatorView.NVActivityIndicatorView.self
+    _ = JSON.self
+    _ = LottieAnimationView.self
+    _ = ChartViewBase.self
+    _ = CropViewController.self
+    _ = SideMenuNavigationController.self
+    _ = SDWebImageManager.self
+    _ = IQKeyboardManager.self
+    _ = YPImagePicker.self
+    _ = NVActivityIndicatorView.self
 }
