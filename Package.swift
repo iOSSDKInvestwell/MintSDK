@@ -17,7 +17,7 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/danielgindi/Charts.git", from: "5.1.0"),
+        .package(name: "DGCharts", url: "https://github.com/danielgindi/Charts.git", from: "5.1.0"),
         .package(url: "https://github.com/hackiftekhar/IQKeyboardManager.git", from: "8.0.3"),
         .package(url: "https://github.com/airbnb/lottie-ios.git", from: "4.6.1"),
         .package(url: "https://github.com/SDWebImage/SDWebImage.git", from: "5.21.7"),
@@ -30,20 +30,20 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "MintFrameworksBinary",
-            url: "https://github.com/iOSSDKInvestwell/MintSDK/releases/download/4.0.1/MintFrameworks.xcframework.zip",
-            checksum: "e36c8aee241cf4eafbadb19ad1d6ee5854b0fbdcdbc9c0d063d8205f025a43c2"
+            url: "https://github.com/iOSSDKInvestwell/MintSDK/releases/download/4.0.2/MintFrameworks.xcframework.zip",
+            checksum: "f34d49cce142bbefde52bf0eba5cc2cdd98121d265adef0d45fd6401f8a4fd92"
         ),
         .binaryTarget(
             name: "VoltFrameworkBinary",
-            url: "https://github.com/iOSSDKInvestwell/MintSDK/releases/download/4.0.1/VoltFramework.xcframework.zip",
-            checksum: "d08cea6d118772e9ae8a022a6bc140b5a03156daac96208321a6757e1711a787"
+            url: "https://github.com/iOSSDKInvestwell/MintSDK/releases/download/4.0.2/VoltFramework.xcframework.zip",
+            checksum: "65e4341d92e065cf6f7a0dd9a8499c59b822ea1afcaf6e25604b726ded085975"
         ),
         .target(
             name: "MintFrameworksWrapper",
             dependencies: [
                 .target(name: "MintFrameworksBinary"),
                 .target(name: "VoltFrameworkBinary"),
-                .product(name: "DGCharts", package: "Charts"),
+                .product(name: "DGCharts", package: "DGCharts"),
                 .product(name: "IQKeyboardManagerSwift", package: "IQKeyboardManager"),
                 .product(name: "Lottie", package: "lottie-ios"),
                 .product(name: "SDWebImage", package: "SDWebImage"),
