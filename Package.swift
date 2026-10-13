@@ -30,12 +30,12 @@ let package = Package(
         .binaryTarget(
             name: "MintFrameworksBinary",
             url: "https://github.com/iOSSDKInvestwell/MintSDK/releases/download/4.0.2/MintFrameworks.xcframework.zip",
-            checksum: "d17b488645ca4758056433b25bee5efb0cbbe7fa177b1c8b73d5b2f7aae59a14"
+            checksum: "ef0b1b5ee1c4581bd8cabb504f5f0391d24f08d19a6e55fa254dfcea518e36ee"
         ),
         .binaryTarget(
             name: "VoltFrameworkBinary",
             url: "https://github.com/iOSSDKInvestwell/MintSDK/releases/download/4.0.2/VoltFramework.xcframework.zip",
-            checksum: "f99b458af61153ec275e35c19abb34ebc54103cd868d7a01ec4876aff2fa24b8"
+            checksum: "967a87d6e6009e78d3938375d26013b8efcb2d091eca03a4099ad908a58e36c1"
         ),
         .target(
             name: "MintFrameworksWrapper",
@@ -44,7 +44,6 @@ let package = Package(
                 .target(name: "VoltFrameworkBinary"),
                 .product(name: "DGCharts", package: "Charts"),
                 .product(name: "IQKeyboardManagerSwift", package: "IQKeyboardManager"),
-                .product(name: "IQKeyboardToolbarManager", package: "IQKeyboardManager"),
                 .product(name: "Lottie", package: "lottie-ios"),
                 .product(name: "SDWebImage", package: "SDWebImage"),
                 .product(name: "SideMenu", package: "SideMenu"),
