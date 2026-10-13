@@ -29,13 +29,13 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "MintFrameworksBinary",
-            url: "https://github.com/iOSSDKInvestwell/MintSDK/releases/download/4.0.9/MintFrameworks.xcframework.zip",
-            checksum: "6149590ae8f7258925816364ebce3e0cae045e1ed0061c2c9dc57d9a94e0d3e3"
+            url: "https://github.com/iOSSDKInvestwell/MintSDK/releases/download/4.1.0/MintFrameworks.xcframework.zip",
+            checksum: "03e1521b76ca78d586bd5935ef9fabfa8a28cedb11dcd2e5ac3cd6f78a23b739"
         ),
         .binaryTarget(
             name: "VoltFrameworkBinary",
-            url: "https://github.com/iOSSDKInvestwell/MintSDK/releases/download/4.0.9/VoltFramework.xcframework.zip",
-            checksum: "2640fb11d7f4612e9bbb93f4a6319ca0b9ad8790d3af88135aa38744da8738d0"
+            url: "https://github.com/iOSSDKInvestwell/MintSDK/releases/download/4.1.0/VoltFramework.xcframework.zip",
+            checksum: "120756e959508444adb591b452d49072ffdf7379ab807de13fc6448e3ac3c0a8"
         ),
         .target(
             name: "MintFrameworksWrapper",
@@ -44,6 +44,7 @@ let package = Package(
                 .target(name: "VoltFrameworkBinary"),
                 .product(name: "DGCharts", package: "Charts"),
                 .product(name: "IQKeyboardManagerSwift", package: "IQKeyboardManager"),
+                .product(name: "IQKeyboardToolbarManager", package: "IQKeyboardManager"),
                 .product(name: "Lottie", package: "lottie-ios"),
                 .product(name: "SDWebImage", package: "SDWebImage"),
                 .product(name: "SideMenu", package: "SideMenu"),

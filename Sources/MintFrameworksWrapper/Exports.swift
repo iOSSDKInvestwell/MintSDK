@@ -3,6 +3,7 @@
 @_exported import VoltFramework
 @_exported import DGCharts
 @_exported import IQKeyboardManagerSwift
+@_exported import IQKeyboardToolbarManager
 @_exported import Lottie
 @_exported import SDWebImage
 @_exported import SideMenu
@@ -19,5 +20,6 @@ public func _mintForceLinkDependencies() {
     _ = SideMenuNavigationController.self
     _ = SDWebImageManager.self
     _ = IQKeyboardManager.self
+    _ = IQKeyboardToolbarManager.self
     _ = YPImagePicker.self
 }
