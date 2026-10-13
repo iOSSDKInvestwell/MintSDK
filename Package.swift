@@ -9,32 +9,23 @@ let package = Package(
     products: [
         .library(
             name: "MintSDK",
-            targets: ["MintFrameworksWrapper"]
+            targets: ["MintFrameworks", "VoltFramework"]
         ),
         .library(
             name: "MintFrameworks",
-            targets: ["MintFrameworksWrapper"]
+            targets: ["MintFrameworks"]
         )
     ],
-    dependencies: [],
     targets: [
         .binaryTarget(
-            name: "MintFrameworksBinary",
-            url: "https://github.com/iOSSDKInvestwell/MintSDK/releases/download/4.0.1/MintFrameworks.xcframework.zip",
-            checksum: "fc9648877105f95c5fba77928f2e76cf5fc53894d6eeb91805ab5ef307d8468c"
+            name: "MintFrameworks",
+            url: "https://github.com/${GITHUB_USER}/${GITHUB_REPO}/releases/download/${VERSION}/MintFrameworks.xcframework.zip",
+            checksum: "f5cfff10163c39bcf74abfdb311879b49ee24446b5f94697e0832e40a5ea21ed"
         ),
         .binaryTarget(
-            name: "VoltFrameworkBinary",
-            url: "https://github.com/iOSSDKInvestwell/MintSDK/releases/download/4.0.1/VoltFramework.xcframework.zip",
-            checksum: "6747bec44bfb4477e8d9a6b259d95510994e336f5c499d8de2f8425c3c93b3b6"
-        ),
-        .target(
-            name: "MintFrameworksWrapper",
-            dependencies: [
-                .target(name: "MintFrameworksBinary"),
-                .target(name: "VoltFrameworkBinary")
-            ],
-            path: "Sources/MintFrameworksWrapper"
+            name: "VoltFramework",
+            url: "https://github.com/${GITHUB_USER}/${GITHUB_REPO}/releases/download/${VERSION}/VoltFramework.xcframework.zip",
+            checksum: "5538079867527d6312d9da1233b972080fd0712dd3d7054653b63010134b5799"
         )
     ]
 )
